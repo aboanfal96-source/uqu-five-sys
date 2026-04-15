@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>طلب إعداد دراسة جدوى — جامعة أم القرى</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0d7a7a;--td:#085f5f;--tl:#1a9090;--gold:#c9a227;--gl:#e8c050;--gd:#a88020}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Tajawal','Cairo',sans-serif;background:#f0f4f4;min-height:100vh}
+.hdr{background:linear-gradient(135deg,#085f5f,#0a4040);padding:0;box-shadow:0 2px 16px rgba(0,0,0,.2)}
+.hdr-in{max-width:900px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;gap:16px}
+.hdr-logo{height:56px;background:#fff;border-radius:10px;padding:8px 12px}
+.hdr-div{width:1px;height:44px;background:rgba(201,162,39,.35)}
+.hdr-txt h1{font-family:'Cairo',sans-serif;font-size:18px;font-weight:900;color:#fff}
+.hdr-txt p{font-size:11px;color:rgba(255,255,255,.55);margin-top:2px}
+.hdr-badge{margin-right:auto;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.3);border-radius:20px;padding:5px 14px;font-size:11px;color:var(--gl);font-weight:600}
+.main{max-width:900px;margin:32px auto;padding:0 16px 60px}
+.welcome{background:#fff;border-radius:14px;padding:24px 28px;margin-bottom:24px;border-right:5px solid var(--teal);box-shadow:0 2px 12px rgba(13,122,122,.08)}
+.welcome h2{font-family:'Cairo',sans-serif;font-size:17px;font-weight:800;color:var(--td);margin-bottom:6px}
+.welcome p{font-size:13px;color:#555;line-height:1.7}
+.steps-info{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+.si{display:flex;align-items:center;gap:8px;background:rgba(13,122,122,.06);border:1px solid rgba(13,122,122,.12);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--td);font-weight:600}
+.si .sn{width:22px;height:22px;border-radius:50%;background:var(--teal);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card{background:#fff;border-radius:14px;padding:28px;box-shadow:0 2px 12px rgba(13,122,122,.07);margin-bottom:20px}
+.card h3{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:var(--td);border-right:4px solid var(--gold);padding-right:10px;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:6px}
+.fg.full{grid-column:1/-1}
+.fg label{font-size:12px;font-weight:700;color:#444}
+.fg label .req{color:var(--gold);margin-right:3px}
+.fg input,.fg select,.fg textarea{background:#f8fafa;border:1.5px solid #dde8e8;border-radius:8px;padding:10px 13px;color:#222;font-family:'Tajawal',sans-serif;font-size:13px;outline:none;width:100%;direction:rtl;transition:border .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--tl);background:#f0f8f8}
+.fg select option{background:#fff}
+.fg textarea{resize:vertical;min-height:80px}
+input::placeholder,textarea::placeholder{color:#aaa}
+.hint{font-size:11px;color:#999;margin-top:2px}
+.dlbl{grid-column:1/-1;height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:6px 0;opacity:.3}
+.btn-sub{width:100%;background:linear-gradient(135deg,var(--teal),var(--td));color:#fff;border:none;border-radius:10px;padding:14px;font-family:'Cairo',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px}
+.btn-sub:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(13,122,122,.3)}
+.btn-sub:disabled{opacity:.5;cursor:not-allowed;transform:none}
+/* SUCCESS */
+#successBox{display:none;background:#fff;border-radius:14px;padding:40px;text-align:center;box-shadow:0 2px 12px rgba(13,122,122,.1)}
+.suc-icon{font-size:56px;margin-bottom:16px}
+.suc-title{font-family:'Cairo',sans-serif;font-size:20px;font-weight:900;color:var(--td);margin-bottom:8px}
+.suc-sub{font-size:14px;color:#555;margin-bottom:20px}
+.suc-id{display:inline-block;background:rgba(13,122,122,.08);border:1px solid rgba(13,122,122,.2);border-radius:8px;padding:8px 20px;font-size:13px;font-weight:700;color:var(--td);margin-bottom:24px;font-family:'Cairo',sans-serif}
+.btn-new{background:var(--teal);color:#fff;border:none;border-radius:8px;padding:11px 24px;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;cursor:pointer}
+@media(max-width:600px){.fgrid{grid-template-columns:1fr}.fg.full{grid-column:1}.steps-info{flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="hdr-in">
+    <img src="data:image/png;base64,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" class="hdr-logo" alt="UQU">
+    <div class="hdr-div"></div>
+    <div class="hdr-txt">
+      <h1>نظام طلبات الدراسات الخمسة</h1>
+      <p>جامعة أم القرى · وكالة الجامعة للمشاريع · قسم الدراسات والتصاميم</p>
+    </div>
+    <div class="hdr-badge">بوابة الموظفين</div>
+  </div>
+</header>
+<div class="main">
+  <div class="welcome">
+    <h2>🏗️ تقديم طلب إعداد دراسة جدوى</h2>
+    <p>يمكنك من خلال هذه البوابة تقديم طلب إعداد دراسة الجدوى (الدراسات الخمسة) لأي مشروع. سيتم مراجعة طلبك من قِبل مدير قسم الدراسات، وعند الموافقة سيتم توليد التقرير الكامل تلقائياً.</p>
+    <div class="steps-info">
+      <div class="si"><div class="sn">١</div>أملأ نموذج الطلب</div>
+      <div class="si"><div class="sn">٢</div>يُراجع المدير الطلب</div>
+      <div class="si"><div class="sn">٣</div>تتلقى التقرير للطباعة</div>
+    </div>
+  </div>
+
+  <div id="formBox">
+    <div class="card">
+      <h3>👤 بيانات مقدم الطلب</h3>
+      <div class="fgrid">
+        <div class="fg"><label>الاسم الكامل <span class="req">●</span></label>
+          <input type="text" id="fReqName" placeholder="م. أحمد محمد العمري"></div>
+        <div class="fg"><label>الإدارة / القسم <span class="req">●</span></label>
+          <input type="text" id="fDept" placeholder="قسم الدراسات والتصاميم"></div>
+        <div class="fg"><label>رقم الجوال / الهاتف</label>
+          <input type="text" id="fPhone" placeholder="05xxxxxxxx"></div>
+        <div class="fg"><label>البريد الإلكتروني</label>
+          <input type="email" id="fEmail" placeholder="example@uqu.edu.sa"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>📋 بيانات المشروع</h3>
+      <div class="fgrid">
+        <div class="fg full"><label>اسم المشروع <span class="req">●</span></label>
+          <input type="text" id="fName" placeholder="مثال: إنشاء البوابات الرئيسية والسور الخارجي لمقر الطالبات"></div>
+        <div class="fg"><label>نوع المشروع <span class="req">●</span></label>
+          <select id="fType">
+            <option value="">— اختر النوع —</option>
+            <option value="إنشائي">إنشائي</option>
+            <option value="بنية تحتية">بنية تحتية</option>
+            <option value="تطوير وتحديث">تطوير وتحديث</option>
+            <option value="صيانة وترميم">صيانة وترميم</option>
+            <option value="تقنية ومعلومات">تقنية ومعلومات</option>
+            <option value="تجهيزات وأثاث">تجهيزات وأثاث</option>
+            <option value="أخرى">أخرى</option>
+          </select></div>
+        <div class="fg"><label>الموقع / المبنى <span class="req">●</span></label>
+          <input type="text" id="fLoc" placeholder="مثال: شطر الطالبات — العابدية"></div>
+        <div class="dlbl"></div>
+        <div class="fg"><label>التكلفة التقديرية للتنفيذ (ريال) <span class="req">●</span></label>
+          <input type="text" id="fCost" placeholder="مثال: 31,000,000">
+          <span class="hint">تكاليف الأعمال الإنشائية فقط</span></div>
+        <div class="fg"><label>مدة التنفيذ المقترحة (شهر) <span class="req">●</span></label>
+          <input type="number" id="fDur" placeholder="مثال: 24" min="1" max="120"></div>
+        <div class="fg"><label>السنة المالية المقترحة</label>
+          <input type="text" id="fYear" placeholder="مثال: 1446-1447 هـ"></div>
+        <div class="fg"><label>المستفيد الرئيسي</label>
+          <input type="text" id="fBen" placeholder="مثال: طالبات الجامعة"></div>
+        <div class="dlbl"></div>
+        <div class="fg full"><label>وصف المشروع وأهدافه <span class="req">●</span></label>
+          <textarea id="fDesc" rows="4" placeholder="اشرح ماذا يتضمن المشروع وما الهدف منه بشكل مفصل..."></textarea></div>
+        <div class="fg full"><label>مبررات الحاجة للمشروع <span class="req">●</span></label>
+          <textarea id="fJust" rows="3" placeholder="ما المشكلة التي يعالجها هذا المشروع؟ ما التداعيات في حال عدم التنفيذ؟"></textarea></div>
+        <div class="fg full"><label>ملاحظات إضافية للمدير</label>
+          <textarea id="fNotes" rows="2" placeholder="أي معلومات إضافية تودّ إيصالها لمدير قسم الدراسات..."></textarea></div>
+        <button class="btn-sub" onclick="submitRequest()">
+          <span>📨</span><span>إرسال طلب الدراسة</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="successBox">
+    <div class="suc-icon">✅</div>
+    <div class="suc-title">تم إرسال طلبك بنجاح</div>
+    <div class="suc-sub">تم استلام طلبك وسيتم مراجعته من قِبل مدير قسم الدراسات. ستتم مراجعة طلبك من قِبل المدير وإعداد التقرير.</div>
+    <div class="suc-id" id="reqIdDisplay">رقم الطلب: —</div>
+    <button class="btn-new" onclick="newRequest()">تقديم طلب جديد</button>
+  </div>
+</div>
+
+<script>
+async function submitRequest(){
+  var n=document.getElementById('fReqName').value.trim();
+  var dept=document.getElementById('fDept').value.trim();
+  var name=document.getElementById('fName').value.trim();
+  var type=document.getElementById('fType').value;
+  var cost=document.getElementById('fCost').value.trim();
+  var dur=document.getElementById('fDur').value.trim();
+  var desc=document.getElementById('fDesc').value.trim();
+  var just=document.getElementById('fJust').value.trim();
+  if(!n||!dept||!name||!type||!cost||!dur||!desc||!just){
+    alert('يرجى ملء جميع الحقول المطلوبة (●)');return;
+  }
+  var btn=document.querySelector('.btn-sub');
+  btn.disabled=true;btn.innerHTML='<span>⏳</span><span>جاري الإرسال...</span>';
+  try{
+    var res=await fetch('/api/submit',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        requesterName:n,department:dept,
+        phone:document.getElementById('fPhone').value,
+        email:document.getElementById('fEmail').value,
+        projectName:name,projectType:type,
+        location:document.getElementById('fLoc').value,
+        costConstruction:cost,duration:dur,
+        fiscalYear:document.getElementById('fYear').value||'1446-1447 هـ',
+        beneficiary:document.getElementById('fBen').value||'منسوبو الجامعة',
+        description:desc,justification:just,
+        notes:document.getElementById('fNotes').value
+      })
+    });
+    var data=await res.json();
+    if(data.success){
+      document.getElementById('formBox').style.display='none';
+      document.getElementById('successBox').style.display='block';
+      document.getElementById('reqIdDisplay').textContent='رقم الطلب: '+data.id;
+    } else { alert('خطأ: '+(data.error||'فشل الإرسال')); }
+  }catch(e){alert('خطأ في الاتصال: '+e.message);}
+  btn.disabled=false;btn.innerHTML='<span>📨</span><span>إرسال طلب الدراسة</span>';
+}
+function newRequest(){
+  document.getElementById('successBox').style.display='none';
+  document.getElementById('formBox').style.display='block';
+  document.querySelectorAll('input,textarea,select').forEach(function(el){el.value='';});
+}
+</script>
+</body>
+</html>
